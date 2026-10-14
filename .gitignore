@@ -1,0 +1,93 @@
+# R history and session files
+.Rhistory
+.Rapp.history
+.RData
+.RDataTmp
+.Ruserdata
+
+# RStudio
+.Rproj.user/
+
+# R environment and secrets
+.Renviron
+.env
+*.pem
+*.key
+
+# R build/check outputs
+*-Ex.R
+/*.tar.gz
+/*.Rcheck/
+
+# knitr / R Markdown caches and temporary files
+*_cache/
+/cache/
+*.utf8.md
+*.knit.md
+
+# Generated site output
+_site/
+site/
+
+# RStudio Connect
+rsconnect/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Large/raw data should not be committed
+raw_data/
+data/raw/
+data/downloads/
+*.CEL
+*.CEL.gz
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.bai
+*.cram
+*.h5ad
+*.h5
+*.rds
+*.RData
+
+# Temporary analysis files
+*.tmp
+*.temp
+~$*
+
+# Local-only scratch and rerun logs
+scratch/
+tmp/
+rerun_logs/
+
+# Generated validation / optional local figure outputs
+results/validation/
+figures/
+
+# Generated manuscript-workflow output directories
+GSE125771_DISCOVERY/
+IDEA2_GSE125771_WHOLE_TRANSCRIPTOME_WGCNA/
+IDEA3A_COMPOSITION_ADJUSTMENT/
+GSE21545_FIXED_SIGNATURE_VALIDATION/
+GSE43292_PRESPECIFIED_VALIDATION/
+GSE163154_PRESPECIFIED_VALIDATION/
+GSE104140_CALCIFICATION_VALIDATION/
+GSE253903_STAGE1/
+GSE253903_STAGE2_CELLTYPE_VALIDATION/
+GSE210152_IDEA3C/
+GSE210152_FROZEN_REPRODUCTION/
+
+# Generated root-level manuscript workflow intermediates
+NMF_gene_modules.csv
+Whole_transcriptome_module_assignments.csv
+
+# Legacy local discovery-input filename; canonical copy is under data/frozen/
+03_Final_Gene_Level_Matrix_Averaged.csv
