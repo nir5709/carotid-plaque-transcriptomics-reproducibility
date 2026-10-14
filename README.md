@@ -83,9 +83,12 @@ Affiliations and machine-readable citation metadata are provided in [`CITATION.c
 
 Please cite the associated manuscript and the archived repository release.
 
-**Zenodo repository DOI (all archived releases):** `10.5281/zenodo.23364589`
+**Archived release:** `v1.0.0`  
+**Zenodo DOI:** [`10.5281/zenodo.23364589`](https://doi.org/10.5281/zenodo.23364589)
 
-For reproducibility claims tied to the exact manuscript snapshot, cite the version-specific DOI for the `v1.0.0` Zenodo record once confirmed from the record page.
+Suggested software citation:
+
+Garg NG, Pancholy M, Pancholy S, Chauhan JS, Patel TM. *Carotid Plaque Transcriptomics: Reproducibility Repository*. Version 1.0.0. Zenodo; 2026. doi:10.5281/zenodo.23364589.
 
 ## License
 
