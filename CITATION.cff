@@ -22,6 +22,10 @@ authors:
     given-names: Tejas M.
     affiliation: "Apex Institute for Personalized Medicine, Ahmedabad, Gujarat, India"
 repository-code: "https://github.com/nir5709/carotid-plaque-transcriptomics-reproducibility"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23364589"
+    description: "Zenodo concept DOI for all archived releases"
 abstract: "Computational workflows and reproducibility materials for integrative bulk and single-cell transcriptomic analysis of human carotid atherosclerosis."
 keywords:
   - carotid atherosclerosis
