@@ -60,7 +60,7 @@ Raw GEO data are not duplicated in this repository. Source datasets should be ob
 
 The repository contains manuscript-facing analysis workflows together with locked signature definitions, documentation, and selected frozen intermediate or derived outputs required to reproduce and verify reported results. Where exact reconstruction depends on historical software or annotation environments, frozen mappings or derived reference outputs are retained as the canonical regression path and are distinguished from current-software reruns.
 
-The manuscript-facing workflow has undergone clean-clone reproducibility and regression testing. The locked regression validator reports **97 PASS, 0 FAIL and 0 SKIP** for the configured checks.
+The manuscript release candidate has undergone clean-clone reproducibility and regression testing, with the locked validator returning **97 PASS, 0 FAIL and 0 SKIP**. The canonical public reconstruction requires the complete frozen-input bundle documented in [`data/frozen/README.md`](data/frozen/README.md). The rerun procedure is documented in [`docs/clean_rerun_protocol.md`](docs/clean_rerun_protocol.md).
 
 ## Third-party resources
 
