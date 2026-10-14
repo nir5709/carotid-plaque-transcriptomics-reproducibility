@@ -123,20 +123,97 @@ if (!is.na(f)) {
 # CIBERSORT-LM22 — canonical historical Windows reproduction
 ###############################################################################
 
-x <- read_required(file.path("data","frozen","GSE125771_CIBERSORT_macrophage_myeloid_composite_correlations_frozen.csv"))
-r <- x[x$Variable == "Macrophage_total" & x$Signature == "Inflammasome",,drop=FALSE]
-if (nrow(r) != 1L) stop("Historical CIBERSORT macrophage/inflammasome row not unique.")
-record("GSE125771","CIBERSORT_Macrophage_Inflammasome","Spearman_rho",r$Spearman_rho,0.499437148217636,1e-12)
-record("GSE125771","CIBERSORT_Macrophage_Inflammasome","FDR",r$FDR,0.004656342871635,1e-12)
+x <- read_required(
+  file.path(
+    "data",
+    "frozen",
+    "GSE125771_CIBERSORT_macrophage_myeloid_composite_correlations_frozen.csv"
+  )
+)
 
-r <- x[x$Variable == "Macrophage_total" & x$Signature == "Fibrous",,drop=FALSE]
-if (nrow(r) != 1L) stop("Historical CIBERSORT macrophage/fibrous row not unique.")
-record("GSE125771","CIBERSORT_Macrophage_Fibrous","Spearman_rho",r$Spearman_rho,-0.396622889305816,1e-12)
-record("GSE125771","CIBERSORT_Macrophage_Fibrous","FDR",r$FDR,0.0203100807856598,1e-12)
+r <- x[
+  x$Variable == "Macrophage_total" &
+  x$Signature == "Inflammasome",
+  ,
+  drop = FALSE
+]
 
-x <- read_required(file.path("data","frozen","GSE125771_CIBERSORT_signature_correlations_Plt0.05_samples_frozen.csv"))
-record("GSE125771","CIBERSORT_good_fit","N_tests",nrow(x),66,0)
-record("GSE125771","CIBERSORT_good_fit","Minimum_FDR_global",min(x$FDR_global,na.rm=TRUE),0.23234454681722,1e-12)
+if (nrow(r) != 1L) {
+  stop("Historical CIBERSORT macrophage/inflammasome row not unique.")
+}
+
+record(
+  "GSE125771",
+  "CIBERSORT_Macrophage_Inflammasome",
+  "Spearman_rho",
+  r$Spearman_rho,
+  0.499437148217636,
+  1e-12
+)
+
+record(
+  "GSE125771",
+  "CIBERSORT_Macrophage_Inflammasome",
+  "FDR",
+  r$FDR,
+  0.004656342871635,
+  1e-12
+)
+
+r <- x[
+  x$Variable == "Macrophage_total" &
+  x$Signature == "Fibrous",
+  ,
+  drop = FALSE
+]
+
+if (nrow(r) != 1L) {
+  stop("Historical CIBERSORT macrophage/fibrous row not unique.")
+}
+
+record(
+  "GSE125771",
+  "CIBERSORT_Macrophage_Fibrous",
+  "Spearman_rho",
+  r$Spearman_rho,
+  -0.396622889305816,
+  1e-12
+)
+
+record(
+  "GSE125771",
+  "CIBERSORT_Macrophage_Fibrous",
+  "FDR",
+  r$FDR,
+  0.0203100807856598,
+  1e-12
+)
+
+x <- read_required(
+  file.path(
+    "data",
+    "frozen",
+    "GSE125771_CIBERSORT_signature_correlations_Plt0.05_samples_frozen.csv"
+  )
+)
+
+record(
+  "GSE125771",
+  "CIBERSORT_good_fit",
+  "N_tests",
+  nrow(x),
+  66,
+  0
+)
+
+record(
+  "GSE125771",
+  "CIBERSORT_good_fit",
+  "Minimum_FDR_global",
+  min(x$FDR_global, na.rm = TRUE),
+  0.23234454681722,
+  1e-12
+)
 
 ###############################################################################
 # GSE21545
@@ -184,7 +261,7 @@ exp <- list(Brown_WGCNA=c(0.775729846,5.427777832e-07),
             Inflammasome_65=c(0.404485595,6.116556968e-07))
 for (nm in names(exp)) {
   r <- row1(x,"Score",nm)
-  note <- "Segment-level arithmetic; patient linkage is unavailable."
+  note <- "Exploratory segment-level arithmetic; patient linkage is unavailable."
   record("GSE163154",nm,"Median_difference",r$Median_difference,exp[[nm]][1],1e-6,note)
   record("GSE163154",nm,"Wilcoxon_FDR",r$Wilcoxon_FDR,exp[[nm]][2],1e-10,note)
 }
@@ -233,37 +310,193 @@ record("GSE253903","pseudobulk_summary","N_pseudobulks",nrow(x),141,0)
 
 gse210152_dir <- "GSE210152_FROZEN_REPRODUCTION"
 
-x <- read_required(file.path(gse210152_dir,"17_candidate_vs_other_paired_tests_FIXED.csv"))
-exp <- list(
-  Inflammasome65_score = c(0.19549249733257,0.1875,0.1875),
-  iLAM_score = c(1.13952315919155,0.0625,0.0833333333333333),
-  TREM2_LAM_score = c(0.732711969557989,0.0625,0.0833333333333333),
-  Brown_WGCNA_score = c(0.326827205244852,0.0625,0.0833333333333333)
+x <- read_required(
+  file.path(
+    gse210152_dir,
+    "17_candidate_vs_other_paired_tests_FIXED.csv"
+  )
 )
+
+exp <- list(
+  Inflammasome65_score = c(
+    0.19549249733257,
+    0.1875,
+    0.1875
+  ),
+  iLAM_score = c(
+    1.13952315919155,
+    0.0625,
+    0.0833333333333333
+  ),
+  TREM2_LAM_score = c(
+    0.732711969557989,
+    0.0625,
+    0.0833333333333333
+  ),
+  Brown_WGCNA_score = c(
+    0.326827205244852,
+    0.0625,
+    0.0833333333333333
+  )
+)
+
 for (nm in names(exp)) {
-  r <- row1(x,"Score",nm)
-  record("GSE210152",nm,"N_donors",r$N_donors,5,0)
-  record("GSE210152",nm,"Median_delta",r$Median_delta,exp[[nm]][1],1e-12)
-  record("GSE210152",nm,"P_value_exact",r$P_value_exact,exp[[nm]][2],1e-12)
-  record("GSE210152",nm,"FDR_exact",r$FDR_exact,exp[[nm]][3],1e-12)
+
+  r <- row1(
+    x,
+    "Score",
+    nm
+  )
+
+  record(
+    "GSE210152",
+    nm,
+    "N_donors",
+    r$N_donors,
+    5,
+    0
+  )
+
+  record(
+    "GSE210152",
+    nm,
+    "Median_delta",
+    r$Median_delta,
+    exp[[nm]][1],
+    1e-12
+  )
+
+  record(
+    "GSE210152",
+    nm,
+    "P_value_exact",
+    r$P_value_exact,
+    exp[[nm]][2],
+    1e-12
+  )
+
+  record(
+    "GSE210152",
+    nm,
+    "FDR_exact",
+    r$FDR_exact,
+    exp[[nm]][3],
+    1e-12
+  )
 }
 
-x <- read_required(file.path(gse210152_dir,"10_candidate_iLAM_donor_representation_FIXED.csv"))
-record("GSE210152","candidate_iLAM","Candidate_cells_total",sum(x$Cells),604,0)
-r <- row1(x,"Patient","P3")
-record("GSE210152","candidate_iLAM","P3_candidate_cells",r$Cells,17,0)
+x <- read_required(
+  file.path(
+    gse210152_dir,
+    "10_candidate_iLAM_donor_representation_FIXED.csv"
+  )
+)
 
-x <- read_required(file.path(gse210152_dir,"19_candidate_iLAM_gene_set_enrichment_FIXED.csv"))
-r <- row1(x,"GeneSet","Brown_WGCNA")
-record("GSE210152","candidate_Brown_marker_enrichment","N_cluster_markers",r$N_cluster_markers,748,0)
-record("GSE210152","candidate_Brown_marker_enrichment","Overlap",r$Overlap,414,0)
-record("GSE210152","candidate_Brown_marker_enrichment","Odds_ratio",r$Odds_ratio,2.87681789118138,1e-12)
-record("GSE210152","candidate_Brown_marker_enrichment","FDR_within_gene_set",r$FDR_within_gene_set,2.580779355979e-42,1e-50)
+record(
+  "GSE210152",
+  "candidate_iLAM",
+  "Candidate_cells_total",
+  sum(x$Cells),
+  604,
+  0
+)
 
-r <- row1(x,"GeneSet","Inflammasome_65")
-record("GSE210152","candidate_Inflammasome_marker_enrichment","Overlap",r$Overlap,5,0)
-record("GSE210152","candidate_Inflammasome_marker_enrichment","Odds_ratio",r$Odds_ratio,1.44990385375493,1e-12)
-record("GSE210152","candidate_Inflammasome_marker_enrichment","FDR_within_gene_set",r$FDR_within_gene_set,0.519844907699352,1e-12)
+r <- row1(
+  x,
+  "Patient",
+  "P3"
+)
+
+record(
+  "GSE210152",
+  "candidate_iLAM",
+  "P3_candidate_cells",
+  r$Cells,
+  17,
+  0
+)
+
+x <- read_required(
+  file.path(
+    gse210152_dir,
+    "19_candidate_iLAM_gene_set_enrichment_FIXED.csv"
+  )
+)
+
+r <- row1(
+  x,
+  "GeneSet",
+  "Brown_WGCNA"
+)
+
+record(
+  "GSE210152",
+  "candidate_Brown_marker_enrichment",
+  "N_cluster_markers",
+  r$N_cluster_markers,
+  748,
+  0
+)
+
+record(
+  "GSE210152",
+  "candidate_Brown_marker_enrichment",
+  "Overlap",
+  r$Overlap,
+  414,
+  0
+)
+
+record(
+  "GSE210152",
+  "candidate_Brown_marker_enrichment",
+  "Odds_ratio",
+  r$Odds_ratio,
+  2.87681789118138,
+  1e-12
+)
+
+record(
+  "GSE210152",
+  "candidate_Brown_marker_enrichment",
+  "FDR_within_gene_set",
+  r$FDR_within_gene_set,
+  2.580779355979e-42,
+  1e-50
+)
+
+r <- row1(
+  x,
+  "GeneSet",
+  "Inflammasome_65"
+)
+
+record(
+  "GSE210152",
+  "candidate_Inflammasome_marker_enrichment",
+  "Overlap",
+  r$Overlap,
+  5,
+  0
+)
+
+record(
+  "GSE210152",
+  "candidate_Inflammasome_marker_enrichment",
+  "Odds_ratio",
+  r$Odds_ratio,
+  1.44990385375493,
+  1e-12
+)
+
+record(
+  "GSE210152",
+  "candidate_Inflammasome_marker_enrichment",
+  "FDR_within_gene_set",
+  r$FDR_within_gene_set,
+  0.519844907699352,
+  1e-12
+)
 
 ###############################################################################
 # Report

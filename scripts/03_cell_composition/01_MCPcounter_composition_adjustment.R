@@ -177,6 +177,7 @@ mcp_matrix <- MCPcounter::MCPcounter.estimate(
   expr,
   featuresType = "HUGO_symbols"
 )
+
 cat("\nMCP-counter cell populations:\n")
 print(rownames(mcp_matrix))
 

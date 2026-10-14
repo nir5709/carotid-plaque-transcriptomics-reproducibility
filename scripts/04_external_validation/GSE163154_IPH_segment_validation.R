@@ -1,8 +1,8 @@
 ###############################################################################
 # GSE163154 — PRESPECIFIED IPH / PLAQUE-INSTABILITY VALIDATION
 # Repository copy prepared for the carotid-plaque-transcriptomics project.
-# The primary 43-segment analysis is segment-level and not patient-adjusted
-# unless an explicit sample-to-patient map is supplied.
+# The primary 43-segment analysis is exploratory and not patient-adjusted unless
+# an explicit sample-to-patient map is supplied.
 ###############################################################################
 
 rm(list = ls())
