@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated manuscript and the archived repository release."
+title: "Carotid Plaque Transcriptomics: Reproducibility Repository"
+type: software
+authors:
+  - family-names: Garg
+    given-names: Nihar G.
+    affiliation: "Apex Institute for Personalized Medicine, Ahmedabad, Gujarat, India"
+  - family-names: Pancholy
+    given-names: Manan
+    affiliation: "Brown University, Providence, Rhode Island, USA"
+  - family-names: Pancholy
+    given-names: Samir
+    affiliation: "The Wright Center for Graduate Medical Education, Scranton, Pennsylvania, USA"
+  - family-names: Chauhan
+    given-names: Jagat S.
+    affiliation: "Apex Institute for Personalized Medicine, Ahmedabad, Gujarat, India"
+  - family-names: Patel
+    given-names: Tejas M.
+    affiliation: "Apex Institute for Personalized Medicine, Ahmedabad, Gujarat, India"
+repository-code: "https://github.com/nir5709/carotid-plaque-transcriptomics-reproducibility"
+abstract: "Computational workflows and reproducibility materials for integrative bulk and single-cell transcriptomic analysis of human carotid atherosclerosis."
+keywords:
+  - carotid atherosclerosis
+  - transcriptomics
+  - inflammasome
+  - fibrous remodelling
+  - osteogenic markers
+  - WGCNA
+  - single-cell RNA-seq
+  - bioinformatics
