@@ -40,6 +40,7 @@ The locked machine-readable gene sets used by the analysis are provided in [`sig
 carotid-plaque-transcriptomics-reproducibility/
 ├── README.md
 ├── CITATION.cff
+├── LICENSE
 ├── data/
 │   └── frozen/
 ├── docs/
@@ -60,7 +61,7 @@ Raw GEO data are not duplicated in this repository. Source datasets should be ob
 
 The repository contains manuscript-facing analysis workflows together with locked signature definitions, documentation, and selected frozen intermediate or derived outputs required to reproduce and verify reported results. Where exact reconstruction depends on historical software or annotation environments, frozen mappings or derived reference outputs are retained as the canonical regression path and are distinguished from current-software reruns.
 
-The manuscript release candidate has undergone clean-clone reproducibility and regression testing, with the locked validator returning **97 PASS, 0 FAIL and 0 SKIP**. The canonical public reconstruction requires the complete frozen-input bundle documented in [`data/frozen/README.md`](data/frozen/README.md). The rerun procedure is documented in [`docs/clean_rerun_protocol.md`](docs/clean_rerun_protocol.md).
+The manuscript reproducibility package has undergone clean-clone reproducibility and regression testing, with the locked validator returning **97 PASS, 0 FAIL and 0 SKIP**. The canonical public reconstruction requires the complete frozen-input bundle documented in [`data/frozen/README.md`](data/frozen/README.md). The rerun procedure is documented in [`docs/clean_rerun_protocol.md`](docs/clean_rerun_protocol.md).
 
 ## Third-party resources
 
@@ -82,4 +83,6 @@ Please cite the associated manuscript and the archived repository release. A per
 
 ## License
 
-No license is asserted here for third-party data, software, reference resources, or materials governed by their original terms. A repository-level software license will be added only after the authors/institution approve the intended reuse terms.
+Original software and code in this repository are released under the [MIT License](LICENSE).
+
+The MIT License applies only to material for which the repository authors hold the relevant rights. It does **not** relicense source datasets from GEO, CIBERSORT/LM22, third-party software, annotation resources, or other externally governed materials; those remain subject to their original licenses and terms of use.
