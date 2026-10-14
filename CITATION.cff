@@ -2,6 +2,9 @@ cff-version: 1.2.0
 message: "If you use this repository, please cite the associated manuscript and the archived repository release."
 title: "Carotid Plaque Transcriptomics: Reproducibility Repository"
 type: software
+version: "1.0.0"
+date-released: 2026-10-14
+license: MIT
 authors:
   - family-names: Garg
     given-names: Nihar G.
