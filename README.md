@@ -1,5 +1,7 @@
 # Carotid Plaque Transcriptomics
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23364589.svg)](https://doi.org/10.5281/zenodo.23364589)
+
 Computational workflows and reproducibility materials supporting integrative bulk and single-cell transcriptomic analyses of human carotid atherosclerosis.
 
 ## Associated study
@@ -79,7 +81,11 @@ Affiliations and machine-readable citation metadata are provided in [`CITATION.c
 
 ## Citation
 
-Please cite the associated manuscript and the archived repository release. A persistent Zenodo DOI will be added to this repository after the first archival release.
+Please cite the associated manuscript and the archived repository release.
+
+**Zenodo repository DOI (all archived releases):** `10.5281/zenodo.23364589`
+
+For reproducibility claims tied to the exact manuscript snapshot, cite the version-specific DOI for the `v1.0.0` Zenodo record once confirmed from the record page.
 
 ## License
 
